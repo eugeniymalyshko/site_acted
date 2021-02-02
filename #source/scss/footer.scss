@@ -1,0 +1,109 @@
+.footer {
+	position: relative;
+	padding: 86px 0 68px;
+	&__row {
+		@include flexbox();
+		justify-content:space-between;
+	}
+	&__column-left {
+		flex: 1 1 24.999%;
+		max-width: 242px;
+		&_center {
+			flex: 1 1 8.333%;
+			margin-left: 62px;
+			
+		}
+	}
+	&__logo {
+		margin-bottom: 14px;
+	}
+	&__about {
+		color: $grey;
+		line-height: 1.5;
+	}
+	&__column {
+		line-height: 1;
+		margin-top: 15px;
+		margin-right: 62px;
+		& p {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		& li {
+			margin-bottom: 16px;
+		}
+	}
+	&__title {
+		padding-bottom: 32px;
+		font-size: 22px;
+	}
+	&__form {
+		&_wrapper {
+		position: relative;
+		max-width: 267px;
+		border: solid 1px $grey;
+		border-right: none;
+		}
+		& input {
+			padding: 12px 0 12px 25px;
+			height: 49px;
+			min-width: 218px;
+		}
+		& button {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			background-color: $red;
+			height: 51px;
+			padding: 13px 15px 15px 15px;
+			box-shadow: 1px 2px 3px #c3c3c3;
+			font-size: 21px;
+		}
+	}
+	&__column-right {
+		flex: 1 1 25%;
+		&_center {
+			flex: 1 1 8.333%;
+		}
+	}
+	&__link {
+		color: $grey;
+	}
+	&__social-buttons {
+		margin-top: 19px;
+	}
+	&__background{
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	&__triangle {
+		&_red {
+			width: 0;
+			height: 0;
+			border-top: 314px solid $red;
+			border-left: 334px solid transparent;
+
+		}
+	}
+}
+.social-buttons {
+	&__link {
+		color: #cbcbcb;
+		&:nth-child(n+2) {
+			margin-left: 23px;
+		}
+	}
+	&__icon {
+		font-size: 23px;
+		&_dribble {
+			margin-left: 45px;
+		}
+		&_facebook {}
+		&_google {}
+		&_twitter {
+			margin-right: 63px;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.top-bar {
+  background-color: #35569C;
+  padding-top: px-to-rem(6px);
+  padding-bottom: px-to-rem(6px);
+  &__row {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__language {
+
+
+  }
+  &__ozbeck {}
+  &__link {
+    font-family: 'Lato', sans-serif;
+    font-size: px-to-rem(16px);
+    line-height: 16.8px;
+    &_white {
+      color: $white;
+    }
+  }
+  &__russian {
+    padding: 0 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-left: solid 2px #fff;
+    border-right: solid 2px #fff;
+
+  }
+  &__english {}
+}

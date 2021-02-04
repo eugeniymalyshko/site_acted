@@ -2,6 +2,7 @@
   background-color: #35569C;
   padding-top: px-to-rem(6px);
   padding-bottom: px-to-rem(6px);
+  height: 34px;
   &__row {
     display: flex;
     justify-content: flex-end;
@@ -15,6 +16,29 @@
     font-family: 'Lato', sans-serif;
     font-size: px-to-rem(16px);
     line-height: 16.8px;
+
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: "";
+      background-color: $white;
+      height: 2px;
+      width: 0%;
+      left: 50%;
+      bottom: -5px;
+      position: absolute;
+      -webkit-transition: width .3s ease-in-out;
+      -moz--transition: width .3s ease-in-out;
+      transition: width .3s ease-in-out;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    &:hover:after, &:focus:after {
+      width: 100%;
+    }
     &_white {
       color: $white;
     }

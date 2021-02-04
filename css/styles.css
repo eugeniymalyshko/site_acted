@@ -410,7 +410,7 @@ template {
   display: none;
 }
 
-/****************** CORE *******************/
+/****************** MAIN *******************/
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -448,11 +448,12 @@ body {
 }
 
 /*******************************************/
-/**************** TOP BAR ******************/
+/**************** TOP-BAR ******************/
 .top-bar {
   background-color: #35569C;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+  height: 34px;
 }
 .top-bar__row {
   display: flex;
@@ -462,6 +463,25 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   line-height: 16.8px;
+  display: inline-block;
+  position: relative;
+}
+.top-bar__link:after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  bottom: -5px;
+  position: absolute;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+.top-bar__link:hover:after, .top-bar__link:focus:after {
+  width: 100%;
 }
 .top-bar__link_white {
   color: #fff;
@@ -477,4 +497,48 @@ body {
 /***************** FOOTER ******************/
 /*******************************************/
 /***************** HEADER ******************/
+.header {
+  background-color: #fff;
+}
+.header__row {
+  display: flex;
+  align-items: center;
+}
+.header__logo_main {
+  margin-right: 1.9298245614%;
+}
+.header__menu {
+  display: flex;
+}
+.header__list {
+  display: flex;
+  flex: 1 0 100%;
+  margin-left: 5.2631578947%;
+}
+.header__link {
+  margin-left: 5.2631578947%;
+}
+.header__donate {
+  max-width: 20px;
+  margin-left: auto;
+}
+
+.donate__button {
+  color: #fff;
+  padding: 0.4375rem;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.donate__button_blue {
+  background-color: #528EDD;
+}
+.donate__button_blue:hover {
+  background-color: #fff;
+}
+.donate__button:hover {
+  border: solid 1px #528EDD;
+  color: #528EDD;
+}
+
 /*******************************************/

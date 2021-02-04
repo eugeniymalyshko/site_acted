@@ -1,0 +1,59 @@
+.header {
+  background-color: $white;
+  &__body {}
+  &__row {
+    @include flexbox();
+    align-items: center;
+  }
+  &__logo {
+    &_main {
+      margin-right: px-to-percent(1140px, 22px);
+    }
+  }
+  &__image {}
+  &__burger {
+    &_line {}
+  }
+  &__menu {
+    @include flexbox();
+
+  }
+  &__list {
+    @include flexbox();
+    flex: 1 0 100%;
+    margin-left: px-to-percent(1140px, 60px);
+  }
+  &__link {
+    margin-left: px-to-percent(1140px, 60px);
+
+  }
+  &__donate {
+    max-width: 20px;
+    margin-left: auto;
+  }
+}
+
+.list {
+  &__item {}
+}
+.donate {
+  &__button {
+    color: $white;
+    padding: px-to-rem(7px);
+    border: solid 1px transparent;
+    border-radius: 5px;
+    @include box-shadow();
+    &_blue {
+      background-color: $donate;
+        &:hover {
+        background-color: $white;
+      }
+    }
+    &_usd {}
+    &_uzs {}
+    &:hover {
+      border: solid 1px $donate;
+      color: $donate;
+    }
+  }
+}

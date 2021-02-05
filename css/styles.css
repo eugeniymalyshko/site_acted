@@ -26,7 +26,7 @@ html, body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: px-to-rem(14px);
+  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -447,13 +447,44 @@ body {
   display: none;
 }
 
+.banner {
+  padding: 100px 0 75px;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+}
+.banner__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 60px;
+  margin: 0 122px 90px;
+}
+.banner__counter {
+  font-size: 24px;
+}
+.banner__summ {
+  font-size: 36px;
+  margin: 19px 0;
+}
+.banner__cta {
+  margin-bottom: 30px;
+}
+.button_b {
+  padding: 15px 33px;
+  border: solid 1px transparent;
+}
+
+.button-hover_transparent:hover {
+  background-color: transparent;
+}
+
 /*******************************************/
 /**************** TOP-BAR ******************/
 .top-bar {
   background-color: #35569C;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  height: 34px;
+  height: 2.125rem;
 }
 .top-bar__row {
   display: flex;
@@ -475,8 +506,6 @@ body {
   left: 50%;
   bottom: -5px;
   position: absolute;
-  -webkit-transition: width 0.3s ease-in-out;
-  -moz--transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -494,50 +523,68 @@ body {
   border-right: solid 2px #fff;
 }
 /*******************************************/
+/**************** BUTTONS ******************/
+/*******************************************/
 /***************** FOOTER ******************/
 /*******************************************/
 /***************** HEADER ******************/
 .header {
+  position: sticky;
+  width: 100%;
+  top: 0;
   background-color: #fff;
 }
 .header__row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.header__logo_main {
-  margin-right: 1.9298245614%;
+.header__columl_left {
+  flex: 0 1 8.333%;
 }
-.header__menu {
+.header__columl_center {
+  flex: 1 0 33.333%;
+}
+.header__columl_right {
+  flex: 1 0 8.333%;
+}
+.header__logo {
   display: flex;
+  margin-right: 1.9298245614%;
 }
 .header__list {
   display: flex;
-  flex: 1 0 100%;
+  justify-content: space-between;
   margin-left: 5.2631578947%;
 }
 .header__link {
+  white-space: nowrap;
+  color: #000;
   margin-left: 5.2631578947%;
+  margin-right: 5.2631578947%;
 }
 .header__donate {
-  max-width: 20px;
-  margin-left: auto;
+  margin-left: 3.125rem;
 }
 
-.donate__button {
-  color: #fff;
-  padding: 0.4375rem;
-  border: solid 1px transparent;
-  border-radius: 5px;
+.button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #fff;
+  border: solid 1px transparent;
 }
-.donate__button_blue {
+.button:hover {
+  border: solid 1px #528EDD;
+}
+.button_sm {
+  padding: 0.5rem;
+}
+.button_blue {
   background-color: #528EDD;
 }
-.donate__button_blue:hover {
+
+.button-hover_white:hover {
   background-color: #fff;
-}
-.donate__button:hover {
-  border: solid 1px #528EDD;
   color: #528EDD;
 }
 

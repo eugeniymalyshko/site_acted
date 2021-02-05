@@ -2,15 +2,12 @@
   background-color: #35569C;
   padding-top: px-to-rem(6px);
   padding-bottom: px-to-rem(6px);
-  height: 34px;
+  height: px-to-rem(34px);
   &__row {
-    display: flex;
+    @include flexbox();
     justify-content: flex-end;
   }
-  &__language {
-
-
-  }
+  &__language {}
   &__ozbeck {}
   &__link {
     font-family: 'Lato', sans-serif;
@@ -29,11 +26,7 @@
       left: 50%;
       bottom: -5px;
       position: absolute;
-      -webkit-transition: width .3s ease-in-out;
-      -moz--transition: width .3s ease-in-out;
       transition: width .3s ease-in-out;
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
       transform: translateX(-50%);
     }
     &:hover:after, &:focus:after {
@@ -49,7 +42,6 @@
     margin-right: 15px;
     border-left: solid 2px #fff;
     border-right: solid 2px #fff;
-
   }
   &__english {}
 }

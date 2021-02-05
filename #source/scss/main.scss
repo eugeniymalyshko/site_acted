@@ -5,7 +5,11 @@ html {
 }
 body {
 	font-family: 'Poppins', sans-serif;
+	//&.lock {
+	//	overflow: hidden;
+	//}
 }
+
 .uppercase {text-transform: uppercase}
 .container {@include min-max(320px, 1170px, 15px);}
 //************** WRAPPER ****************
@@ -22,8 +26,55 @@ body {
 	display: none;
 	}
 }
-//************ MAINBLOCK ****************
+//************** BANNER *****************
+.banner {
+	padding: 100px 0 75px;
+	color: $white;
+	text-align: center;
+	height: 100%;
+	&__image {
 
+	}
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 60px;
+		margin: 0 122px 90px;
+	}
+	&__counter {
+		font-size: 24px;
+	}
+	&__total {
+	}
+	&__summ {
+		font-size: 36px;
+		margin: 19px 0;
+	}
+	&__cta {
+		margin-bottom: 30px;
+	}
+	&__donate {}
+}
+
+.banner {
+	&__donate {}
+}
+.donate {
+
+}
+.button {
+	&_b {
+		padding: 15px 33px;
+		border: solid 1px transparent;
+	}
+}
+.button-hover {
+	&_transparent {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
 //***************************************
 //************** ABOUT ******************
 

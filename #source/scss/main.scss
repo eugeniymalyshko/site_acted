@@ -27,16 +27,20 @@ body {
 }
 //************** BANNER *****************
 .banner {
-	padding: 100px 0 75px;
+	padding: 60px 0 75px;
 	color: $white;
 	text-align: center;
 	height: 100%;
 	&__image {}
+	&__heshtag {
+		font-size: 50px;
+		margin-bottom: 15px;
+	}
 	&__title {
 		font-size: px-to-rem(32px);
 		font-weight: 600;
 		line-height: 60px;
-		margin: 0 115px 55px;
+		margin: 0 115px 30px;
 	}
 	&__counter {}
 	&__total {

@@ -35,7 +35,7 @@
   }
   &__menu {
     &.active {
-      position: fixed;
+      position: absolute;
       top: 0;
     }
     &_hidden {
@@ -46,7 +46,7 @@
       height: 100%;
       background-color: rgba(0,0,0,0.7);
       transition: all 0.3s ease;
-      padding: 65px 20px 10px 20px;
+      padding: 100px 20px 10px 20px;
       &.active {
         top: 0;
       }
@@ -59,10 +59,9 @@
     &_hidden {
       position: relative;
       display: block;
-      background-color: rgb(218,232,238);
       height: 100%;
       width: 25%;
-      left: -25px;
+      left: 0;
     }
   }
   &__link {
@@ -75,6 +74,10 @@
     display: inline-block;
     position: relative;
     &_hidden {
+      color: $white;
+      &:after {
+        background-color: $white;
+      }
     }
     &:after {
       display: block;
@@ -164,7 +167,7 @@
 }
 .donate {
   @include flexbox;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   z-index: 3;
 }
@@ -179,10 +182,6 @@
 }
 
 
-
-
-
-.donate {}
 .button {
   @include box-shadow;
   border-radius: 5px;

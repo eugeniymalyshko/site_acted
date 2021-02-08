@@ -5,11 +5,10 @@ html {
 }
 body {
 	font-family: 'Poppins', sans-serif;
-	//&.lock {
-	//	overflow: hidden;
-	//}
+	&.lock {
+		overflow: hidden;
+	}
 }
-
 .uppercase {text-transform: uppercase}
 .container {@include min-max(320px, 1170px, 15px);}
 //************** WRAPPER ****************
@@ -32,36 +31,31 @@ body {
 	color: $white;
 	text-align: center;
 	height: 100%;
-	&__image {
-
-	}
+	&__image {}
 	&__title {
-		font-size: 32px;
+		font-size: px-to-rem(32px);
 		font-weight: 600;
 		line-height: 60px;
-		margin: 0 122px 90px;
+		margin: 0 115px 55px;
 	}
-	&__counter {
-		font-size: 24px;
-	}
+	&__counter {}
 	&__total {
+		font-size: px-to-rem(24px);
 	}
-	&__summ {
-		font-size: 36px;
+	&__sum {
+		font-size: px-to-rem(36px);
 		margin: 19px 0;
 	}
 	&__cta {
+		font-size: 24px;
 		margin-bottom: 30px;
 	}
 	&__donate {}
 }
-
 .banner {
 	&__donate {}
 }
-.donate {
-
-}
+.donate {}
 .button {
 	&_b {
 		padding: 15px 33px;
@@ -79,7 +73,7 @@ body {
 //************** ABOUT ******************
 
 //***************************************
-//************ SERVICESS ****************
+//************ SERVICES *****************
 
 //***************************************
 //************* VIDEO-BG ****************

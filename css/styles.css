@@ -414,6 +414,9 @@ template {
 body {
   font-family: "Poppins", sans-serif;
 }
+body.lock {
+  overflow: hidden;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -454,19 +457,20 @@ body {
   height: 100%;
 }
 .banner__title {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 60px;
-  margin: 0 122px 90px;
+  margin: 0 115px 55px;
 }
-.banner__counter {
-  font-size: 24px;
+.banner__total {
+  font-size: 1.5rem;
 }
-.banner__summ {
-  font-size: 36px;
+.banner__sum {
+  font-size: 2.25rem;
   margin: 19px 0;
 }
 .banner__cta {
+  font-size: 24px;
   margin-bottom: 30px;
 }
 .button_b {
@@ -565,7 +569,7 @@ body {
   display: block;
 }
 .header__menu.active {
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 .header__menu_hidden {
@@ -576,7 +580,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease;
-  padding: 65px 20px 10px 20px;
+  padding: 100px 20px 10px 20px;
 }
 .header__menu_hidden.active {
   top: 0;
@@ -589,10 +593,9 @@ body {
 .header__list_hidden {
   position: relative;
   display: block;
-  background-color: #dae8ee;
   height: 100%;
   width: 25%;
-  left: -25px;
+  left: 0;
 }
 .header__link {
   color: #000;
@@ -603,6 +606,12 @@ body {
   transition: width 0.3s ease-in-out;
   display: inline-block;
   position: relative;
+}
+.header__link_hidden {
+  color: #fff;
+}
+.header__link_hidden:after {
+  background-color: #fff;
 }
 .header__link:after {
   display: block;
@@ -667,7 +676,7 @@ body {
 
 .donate {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   z-index: 3;
 }

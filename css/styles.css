@@ -612,7 +612,7 @@ body.lock {
   position: relative;
 }
 .header__link_hidden {
-  color: #fff;
+  color: #000;
 }
 .header__link_hidden:after {
   background-color: #fff;

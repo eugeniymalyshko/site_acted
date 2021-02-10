@@ -9,7 +9,6 @@ body {
 		overflow: hidden;
 	}
 }
-.uppercase {text-transform: uppercase}
 .container {@include min-max(320px, 1170px, 15px);}
 //************** WRAPPER ****************
 .wrapper {@include flexbox(); flex-direction: column; min-height: 100%; overflow: hidden;}
@@ -17,6 +16,7 @@ body {
 .content {
 	flex: 1 1 auto;
 }
+.uppercase {text-transform: uppercase;}
 .ibg {
 	background-position: center;
 	background-size: cover;

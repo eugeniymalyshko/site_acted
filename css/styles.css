@@ -26,7 +26,6 @@ html, body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -418,10 +417,6 @@ body.lock {
   overflow: hidden;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .container {
   min-width: 320px;
   max-width: 1170px;
@@ -439,6 +434,10 @@ body.lock {
 
 .content {
   flex: 1 1 auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .ibg {
@@ -582,9 +581,11 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s ease;
-  padding: 100px 20px 10px 20px;
+  padding: 100px 20px 10px 50px;
+  max-width: 25%;
+  background-color: bisque;
 }
 .header__menu_hidden.active {
   top: 0;
@@ -598,24 +599,16 @@ body.lock {
   position: relative;
   display: block;
   height: 100%;
-  width: 25%;
   left: 0;
 }
 .header__link {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
-  margin-left: 5.5rem;
   transition: width 0.3s ease-in-out;
   display: inline-block;
   position: relative;
-}
-.header__link_hidden {
-  color: #fff;
-}
-.header__link_hidden:after {
-  background-color: #fff;
 }
 .header__link:after {
   display: block;
@@ -674,6 +667,9 @@ body.lock {
 .header__burger:after {
   bottom: 0;
 }
+.list__item:nth-child(n+2) {
+  margin-left: 5.5rem;
+}
 .list__item_hidden {
   margin: 0 0 20px 0;
 }
@@ -712,4 +708,29 @@ body.lock {
 
 /*******************************************/
 /***************** FOOTER ******************/
+.footer {
+  background-color: #35569C;
+  padding: 20px 0;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__list {
+  display: flex;
+  margin-left: 100px;
+}
+.footer__list:first-child {
+  margin-left: 0;
+}
+.footer__link {
+  color: #fff;
+}
+.footer__social-icons {
+  display: flex;
+}
+.social-icons:nth-child(n+2) {
+  margin-left: 40px;
+}
 /*******************************************/

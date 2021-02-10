@@ -1,3 +1,38 @@
 .footer {
+  background-color: $blue;
+  padding: 20px 0;
+  &__row {
+    @include flexbox;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
+    @include flexbox;
+    margin-left: 100px;
 
+    &:first-child {
+      margin-left: 0;
+
+    }
+  }
+  &__link {
+    color: $white;
+  }
+  &__social-icons {
+    @include flexbox;
+  }
+  &__image {}
+}
+.list {
+  &__item {}
+}
+.social-icons {
+  &:nth-child(n+2) {
+    margin-left: 40px;
+  }
+  &__fb {}
+  &__link {}
+  &__insta {}
+  &__twitter {}
+  &__you-tube {}
 }

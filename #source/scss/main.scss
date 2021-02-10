@@ -74,7 +74,91 @@ body {
 	}
 }
 //***************************************
-//************** ABOUT ******************
+//************** FACTS ******************
+.facts {
+	padding: 60px 0 45px;
+	&__row {
+		@include flexbox;
+		justify-content: space-between;
+	}
+	&__column {
+		&_left {}
+		&_right {}
+	}
+	&__bg-image {}
+	&__image {}
+	&__title {
+		margin: 60px 0 21px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	&__list {}
+	&__list-item {
+		list-style: disc;
+		line-height: 30px;
+		margin-bottom: 15px;
+		max-width: 555px;
+	}
+	&__video {}
+	&__recent-donors {}
+}
+.video {
+	max-height: 284px;
+	margin-bottom: 60px;
+}
+.recent-donors {
+	&__title {
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	&__list {
+		padding: 40px 15px 50px;
+		@include box-shadow;
+		background-color: $white;
+
+
+
+	}
+	&__list-item {
+		margin-bottom: 15px;
+		@include flexbox;
+		justify-content: left;
+		align-items: center;
+		padding-bottom: 15px;
+		border-bottom: solid 1px #E5E5E5;
+	}
+}
+.donor {
+	&__icon {
+		width: px-to-rem(50px);
+		height: px-to-rem(50px);
+		border-radius: 50%;
+		background-color: $donate;
+		margin-right: 12px;
+		@include box-shadow;
+	}
+	&__name {
+		font-size: 18px;
+
+	}
+	&__date {
+		display: block;
+		color: #B8B5B5;
+		font-size: 14px;
+		margin-top: px-to-percent(2px);
+	}
+	&__sum {
+		padding: 8.5px 31.5px;
+		color: $white;
+		font-weight: 600;
+		margin-left: 180px;
+		border-radius: 50px;
+		background-color: $donate;
+		@include box-shadow;
+	}
+}
 
 //***************************************
 //************ SERVICES *****************

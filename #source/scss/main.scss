@@ -31,28 +31,48 @@ body {
 	color: $white;
 	text-align: center;
 	height: 100%;
+	@media (max-width: 768px) {
+		padding: 35px 0 60px;
+	}
 	&__image {}
 	&__heshtag {
-		font-size: 50px;
+		font-size: px-to-rem(50px);
 		margin-bottom: 15px;
+		@media (max-width: 768px) {
+			font-size: px-to-rem(30px);
+		}
 	}
 	&__title {
 		font-size: px-to-rem(32px);
 		font-weight: 600;
 		line-height: 60px;
 		margin: 0 115px 30px;
+		@media (max-width: 768px) {
+			font-size: 20px;
+			line-height: 40px;
+			margin: 0 0 20px 0;
+		}
 	}
 	&__counter {}
 	&__total {
 		font-size: px-to-rem(24px);
+		@media (max-width: 768px) {
+			font-size: px-to-rem(22px);
+		}
 	}
 	&__sum {
 		font-size: px-to-rem(36px);
 		margin: 19px 0;
+		@media (max-width: 768px) {
+			font-size: px-to-rem(28px);
+		}
 	}
 	&__cta {
-		font-size: 24px;
+		font-size: px-to-rem(24px);
 		margin-bottom: 30px;
+		@media (max-width: 768px) {
+			font-size: px-to-rem(18px);
+		}
 	}
 	&__donate {}
 }
@@ -64,6 +84,9 @@ body {
 	&_b {
 		padding: 15px 33px;
 		border: solid 1px transparent;
+		@media (max-width: 768px) {
+			padding: 6px 8px;
+		}
 	}
 }
 .button-hover {
@@ -82,7 +105,11 @@ body {
 		justify-content: space-between;
 	}
 	&__column {
-		&_left {}
+		&_left {
+			@media (max-width: 768px) {
+				flex: 0 0 200px;
+			}
+		}
 		&_right {}
 	}
 	&__bg-image {}

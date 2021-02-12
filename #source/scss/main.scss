@@ -100,25 +100,42 @@ body {
 //************** FACTS ******************
 .facts {
 	padding: 60px 0 45px;
+	@media (min-width: 320px) {
+		padding-top: 20px;
+	}
 	&__row {
 		@include flexbox;
 		justify-content: space-between;
+		@media (max-width: 992px) {
+			display: block;
+
+		}
 	}
 	&__column {
 		&_left {
 			@media (max-width: 768px) {
-				flex: 0 0 200px;
+				//flex: 0 0 200px;
 			}
 		}
 		&_right {}
 	}
 	&__bg-image {}
-	&__image {}
+	&__image {
+		@media (min-width: 320px) {
+			width: 100%;
+		}
+		@media (min-width: 480px) {
+			//width: 320px;
+		}
+	}
 	&__title {
 		margin: 60px 0 21px;
 		text-align: center;
 		font-size: 24px;
 		font-weight: 600;
+		@media (min-width: 320px) {
+			margin: 20px 0 10px;
+		}
 	}
 	&__list {}
 	&__list-item {
@@ -126,6 +143,10 @@ body {
 		line-height: 30px;
 		margin-bottom: 15px;
 		max-width: 555px;
+		@media (min-width: 320px) {
+			margin: 0 0 10px 15px;
+		}
+
 	}
 	&__video {}
 	&__recent-donors {}

@@ -13,15 +13,19 @@
   }
   &__row {
     position: relative;
-    display: flex;
+    @include flexbox;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
+    @media (max-width: 480px) {
+      padding: 5px 0;
+    }
   }
   &__logos {
     @include flexbox;
   }
   &__logo {
-    flex: 0 0 60px;
+    flex: 0 0 50px;
     overflow: hidden;
     position: relative;
     z-index: 3;
@@ -29,12 +33,9 @@
       flex: 0 0 40px;
     }
     &_main {
-      margin-right: px-to-rem(22px);
-      @media (max-width: 1140px) {
-        margin-right: px-to-percent(12px);
-      }
-      @media (max-width: 968px) {
-        margin-right: px-to-percent(6px);
+      margin-right: 22px;
+      @media (max-width: 992px) {
+        margin-right: 6px;
       }
     }
   }
@@ -43,9 +44,21 @@
     display: block;
   }
   &__menu {
-    &.active {
-      position: absolute;
-      top: 0;
+    @media (max-width: 991px) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+      padding-left: 25px;
+      &.active {
+        z-index: 2;
+        top: 275px;
+      }
+    }
+    @media (min-width: 992px) {
+      margin-left: auto;
     }
     &_hidden {
       position: fixed;
@@ -54,20 +67,11 @@
       width: 100%;
       height: 100%;
       transition: all 0.3s ease;
-      padding: 100px 20px 10px 50px;
-      background: linear-gradient(to right, #DAE8EE 25%, rgba(0,0,0,0.2) 25%,rgba(0,0,0,0.2) 25%);
-      &.active {
-        top: 0;
+      padding: 100px 0 0 25px;
+      background: linear-gradient(to right, #DAE8EE 40%, rgba(0,0,0,0.2) 30%,rgba(0,0,0,0.2) 30%);
+      @media (max-width: 768px) {
+        background: #DAE8EE;
       }
-    }
-    @media (max-width: 767px) {
-      position: fixed;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transition: all 0.3s ease;
-      //padding: 100px 20px 10px 50px;
       &.active {
         top: 0;
       }
@@ -77,6 +81,9 @@
     @include flexbox;
     position: relative;
     z-index: 2;
+    @media (max-width: 991px) {
+      display: block;
+    }
     &_hidden {
       position: relative;
       display: block;
@@ -89,9 +96,12 @@
     font-size: px-to-rem(16px);
     font-weight: 500;
     line-height: px-to-rem(24px);
-    transition: width .3s ease-in-out;
+    transition: width 0.3s ease-in-out;
     display: inline-block;
     position: relative;
+    @media (max-width: 991px) {
+      font-size: px-to-rem(24px);
+    }
     &_hidden {
       font-size: px-to-rem(24px);
     }
@@ -117,7 +127,12 @@
     width: 30px;
     height: 20px;
     z-index: 3;
-    @media (max-width: 767px) {
+    @media (min-width: 992px) {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+    @media (max-width: 991px) {
+      margin-left: 0;
       order: 4;
     }
     &.active:before {
@@ -157,29 +172,36 @@
     }
   }
   &__column {
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       margin-left: auto;
       margin-right: 15px;
     }
     &_right {}
   }
-  &__donate {
-  }
+  &__donate {}
 }
 .image {}
 .list {
   &__item {
-    &:nth-child(n+2) {
-      margin-left: px-to-rem(88px);
-      @media (max-width: 1140px) {
-        margin-left: px-to-rem(40px);
-      }
-      @media (max-width: 968px) {
-        margin-left: px-to-rem(20px);
+    margin-left: 88px;
+    &:first-child {
+      margin-left: 15px;
+      @media (min-width: 992px) and (max-width: 1199px) {
+        margin-left: 10px;
+     }
+      @media (max-width: 991px) {
+        margin-left: 0;
       }
     }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      margin-left: 40px;
+    }
+    @media (max-width: 991px) {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
     &_hidden {
-      margin: 0 0 20px 0;
+      margin-bottom: 20px;
     }
   }
 }
@@ -190,18 +212,9 @@
   z-index: 3;
 }
 .button {
+  @include box-shadow;
   display: block;
   margin-left: 16px;
-  &_sm {}
-  &_blue {}
-}
-.button-hover {
-  &_white {}
-}
-
-
-.button {
-  @include box-shadow;
   border-radius: 5px;
   color: $white;
   border: solid 1px transparent;
@@ -220,13 +233,9 @@
     &:hover {
       background-color: $white;
       color: $donate;
-
     }
   }
 }
-
-
-
 
 
 

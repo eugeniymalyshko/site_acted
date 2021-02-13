@@ -106,27 +106,35 @@ body {
 	&__row {
 		@include flexbox;
 		justify-content: space-between;
-		@media (max-width: 992px) {
-			display: block;
-
+		@media (max-width: 991px) {
+			flex-direction: column;
 		}
 	}
 	&__column {
 		&_left {
+			flex: 0 1 50%;
 			@media (max-width: 768px) {
-				//flex: 0 0 200px;
+				//order: 2;
 			}
 		}
-		&_right {}
+		&_right {
+			flex: 0 1 50%;
+			padding-left: 15px;
+			@media (max-width: 991px) {
+				//order: 1;
+				 padding-left: 0;
+			}
+		}
 	}
-	&__bg-image {}
+	&__bg-image {
+		@media (min-width: 320px) and (max-width: 991px) {
+			margin: 0 auto;
+		}
+	}
 	&__image {
-		@media (min-width: 320px) {
-			width: 100%;
-		}
-		@media (min-width: 480px) {
-			//width: 320px;
-		}
+		width: 100%;
+		height: auto;
+		max-height: 100%;
 	}
 	&__title {
 		margin: 60px 0 21px;
@@ -137,37 +145,64 @@ body {
 			margin: 20px 0 10px;
 		}
 	}
-	&__list {}
+	&__list {
+		margin-right: px-to-percent(20px);
+		@media (min-width: 768px) and (max-width: 991px) {
+			margin-left: px-to-percent(30px);
+			margin-right: px-to-percent(30px);
+		}
+	}
 	&__list-item {
 		list-style: disc;
 		line-height: 30px;
 		margin-bottom: 15px;
-		max-width: 555px;
 		@media (min-width: 320px) {
 			margin: 0 0 10px 15px;
+			max-width: 100%;
+		}
+	}
+	&__video {
+		margin: 0 auto;
+		@media (min-width: 320px) and (max-width: 991px) {
+			margin: 15px  auto 0 ;
 		}
 
 	}
-	&__video {}
-	&__recent-donors {}
+	&__recent-donors {
+		@media (min-width: 768px) and (max-width: 991px) {
+			max-width: px-to-percent(800px);
+			margin: 0 auto;
+		}
+	}
 }
 .video {
-	max-height: 284px;
-	margin-bottom: 60px;
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	margin-bottom: 20px;
+	@media (min-width: 320px) and (max-width: 991px) {
+		margin-bottom: 15px;
+	}
 }
 .recent-donors {
 	&__title {
 		font-size: 24px;
 		text-align: center;
 		margin-bottom: 30px;
+		@media (min-width: 320px) {
+			margin-bottom: 15px;
+		}
 	}
 	&__list {
 		padding: 40px 15px 50px;
 		@include box-shadow;
 		background-color: $white;
-
-
-
+		@media (min-width: 320px) {
+			padding: 20px 5px 30px;
+		}
+		@media (min-width: 480px) and (max-width:991px) {
+			//max-width: 100%;
+		}
 	}
 	&__list-item {
 		margin-bottom: 15px;
@@ -186,16 +221,29 @@ body {
 		background-color: $donate;
 		margin-right: 12px;
 		@include box-shadow;
+		@media (min-width: 320px) {
+			width: px-to-rem(25px);
+			height: px-to-rem(25px);
+			margin-left: 5px;
+		}
 	}
 	&__name {
 		font-size: 18px;
+		@media (min-width: 320px) {
+			font-size: 16px;
+
+		}
 
 	}
 	&__date {
 		display: block;
 		color: #B8B5B5;
 		font-size: 14px;
-		margin-top: px-to-percent(2px);
+		margin-top: px-to-rem(2px);
+		@media (min-width: 320px) {
+			margin-top: px-to-rem(6px);
+
+		}
 	}
 	&__sum {
 		padding: 8.5px 31.5px;
@@ -205,6 +253,13 @@ body {
 		border-radius: 50px;
 		background-color: $donate;
 		@include box-shadow;
+		@media (min-width: 320px) {
+			padding: 5px 15px;
+			font-size: 14px;
+			margin-left: auto;
+			margin-right: 5px;
+
+		}
 	}
 }
 

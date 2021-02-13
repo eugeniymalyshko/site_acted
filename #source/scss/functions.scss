@@ -4,6 +4,6 @@
   @return #{$size / $basicSize}rem;
 }
 
-@function px-to-percent($margin, $width-block: 1140px) {
+@function px-to-percent($margin, $width-block:1140px) {
   @return #{($margin / $width-block)*100%};
 }

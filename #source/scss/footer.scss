@@ -8,14 +8,13 @@
     @include flexbox;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: 320px) {
+    @media (min-width: 320px) and (max-width: 480px) {
       flex-direction: column;
     }
   }
   &__list {
     @include flexbox;
     margin-left: 100px;
-
     &:first-child {
       margin-left: 0;
 
@@ -45,15 +44,20 @@
     @include flexbox;
   }
   &__image {
-    @media (min-width: 320px) {
-      width: 20px;
-      height: 20px;
+    @media (min-width: 320px) and (max-width: 479px) {
+      width: 30px;
+      height: 30px;
+    }
+    @media (min-width: 480px) and (max-width: 767px) {
+      //width: 30px;
+      //height: 30px;
     }
   }
 }
 .list {
-  &__item {
-    @media (min-width: 320px) {
+  &__item-footer {
+    margin-left: 20px;
+    @media (min-width: 320px) and (max-width: 480px) {
       font-size: 14px;
       margin-bottom: 10px;
       margin-left: 15px;
@@ -63,7 +67,7 @@
 .social-icons {
   &:nth-child(n+2) {
     margin-left: 40px;
-    @media (min-width: 320px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       margin-left:10px;
 
 

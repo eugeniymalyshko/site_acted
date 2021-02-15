@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Poppins:wght@400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -449,6 +449,28 @@ body.lock {
   display: none;
 }
 
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .title {
+    margin: 20px 0 10px;
+  }
+}
+
+.text {
+  font-size: 1.1875rem;
+  line-height: 40px;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 .banner {
   padding: 60px 0 75px;
   color: #fff;
@@ -523,9 +545,10 @@ body.lock {
 }
 
 .facts {
+  background-color: #f6f6f6;
   padding: 60px 0 45px;
 }
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 991px) {
   .facts {
     padding-top: 20px;
   }
@@ -551,26 +574,13 @@ body.lock {
     padding-left: 0;
   }
 }
-@media (min-width: 320px) and (max-width: 991px) {
-  .facts__bg-image {
-    margin: 0 auto;
-  }
-}
 .facts__image {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
 .facts__title {
-  margin: 60px 0 21px;
   text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-}
-@media (min-width: 320px) {
-  .facts__title {
-    margin: 20px 0 10px;
-  }
 }
 .facts__list {
   margin-right: 1.7543859649%;
@@ -593,11 +603,11 @@ body.lock {
   }
 }
 .facts__video {
-  margin: 0 auto;
+  margin: 0 auto 120px;
 }
 @media (min-width: 320px) and (max-width: 991px) {
   .facts__video {
-    margin: 15px auto 0;
+    margin: 15px auto 15px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -606,16 +616,12 @@ body.lock {
     margin: 0 auto;
   }
 }
-
-.video {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  margin-bottom: 20px;
+.facts__bg-image {
+  margin-top: 60px;
 }
 @media (min-width: 320px) and (max-width: 991px) {
-  .video {
-    margin-bottom: 15px;
+  .facts__bg-image {
+    display: none;
   }
 }
 
@@ -700,6 +706,60 @@ body.lock {
   }
 }
 
+.domestic-violence {
+  padding: 60px 0 45px;
+}
+@media (min-width: 320px) and (max-width: 991px) {
+  .domestic-violence {
+    padding: 20px 0;
+  }
+}
+.domestic-violence__title {
+  text-align: right;
+  margin-bottom: 40px;
+}
+@media (min-width: 320px) and (max-width: 991px) {
+  .domestic-violence__title {
+    text-align: center;
+  }
+}
+
+.video {
+  z-index: 30;
+}
+
+.our-initiative {
+  background-color: #f6f6f6;
+  padding: 60px 0 80px;
+}
+.our-initiative__title {
+  margin-bottom: 40px;
+}
+.our-initiative__text {
+  margin-bottom: 30px;
+}
+.our-initiative__list-item {
+  list-style: inside;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.our-initiative__list-item:last-child {
+  margin-bottom: 50px;
+}
+
+.list__title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  display: inline-block;
+  margin: 50px 0 20px;
+}
+
+.join-us {
+  padding: 60px 0 80px;
+}
+.join-us__text {
+  margin: 25px 0;
+}
 /*******************************************/
 /**************** TOP-BAR ******************/
 .top-bar {

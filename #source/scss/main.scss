@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Poppins:wght@400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;500;600;900&display=swap');
 
 html {
 
@@ -24,6 +24,23 @@ body {
 	& img {
 	display: none;
 	}
+}
+.title {
+	font-size: px-to-rem(24px);
+	font-weight: 600;
+	margin-bottom: 20px;
+	@media (min-width: 320px) and (max-width: 480px) {
+		margin: 20px 0 10px;
+	}
+}
+.text {
+	font-size: px-to-rem(19px);
+	line-height: 40px;
+}
+.video {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
 }
 //************** BANNER *****************
 .banner {
@@ -99,8 +116,9 @@ body {
 //***************************************
 //************** FACTS ******************
 .facts {
+	background-color: #f6f6f6;
 	padding: 60px 0 45px;
-	@media (min-width: 320px) {
+	@media (min-width: 320px) and (max-width: 991px) {
 		padding-top: 20px;
 	}
 	&__row {
@@ -126,24 +144,13 @@ body {
 			}
 		}
 	}
-	&__bg-image {
-		@media (min-width: 320px) and (max-width: 991px) {
-			margin: 0 auto;
-		}
-	}
 	&__image {
 		width: 100%;
 		height: auto;
 		max-height: 100%;
 	}
 	&__title {
-		margin: 60px 0 21px;
 		text-align: center;
-		font-size: 24px;
-		font-weight: 600;
-		@media (min-width: 320px) {
-			margin: 20px 0 10px;
-		}
 	}
 	&__list {
 		margin-right: px-to-percent(20px);
@@ -162,9 +169,9 @@ body {
 		}
 	}
 	&__video {
-		margin: 0 auto;
+		margin: 0 auto 120px;
 		@media (min-width: 320px) and (max-width: 991px) {
-			margin: 15px  auto 0 ;
+			margin: 15px auto 15px ;
 		}
 
 	}
@@ -174,15 +181,13 @@ body {
 			margin: 0 auto;
 		}
 	}
-}
-.video {
-	width: 100%;
-	height: auto;
-	max-height: 100%;
-	margin-bottom: 20px;
-	@media (min-width: 320px) and (max-width: 991px) {
-		margin-bottom: 15px;
+	&__bg-image {
+		margin-top: 60px;
+		@media (min-width: 320px) and (max-width: 991px) {
+			display: none;
+		}
 	}
+
 }
 .recent-donors {
 	&__title {
@@ -199,9 +204,6 @@ body {
 		background-color: $white;
 		@media (min-width: 320px) {
 			padding: 20px 5px 30px;
-		}
-		@media (min-width: 480px) and (max-width:991px) {
-			//max-width: 100%;
 		}
 	}
 	&__list-item {
@@ -264,14 +266,68 @@ body {
 }
 
 //***************************************
-//************ SERVICES *****************
+//********* DOMESTIC-VIOLENCE ***********
+.domestic-violence {
+	padding: 60px 0 45px;
+	@media (min-width: 320px) and 	(max-width: 991px) {
+		padding: 20px 0;
+	}
+
+	&__row {}
+	&__title {
+		text-align: right;
+		margin-bottom: 40px;
+		@media (min-width: 320px) and (max-width: 991px) {
+			text-align: center;
+		}
+	}
+}
+.video {
+	z-index: 30;
+}
 
 //***************************************
-//************* VIDEO-BG ****************
+//********** OUR-INITIATIVE *************
+.our-initiative {
+	background-color: #f6f6f6;
+	padding: 60px 0 80px;
 
+	&__row {}
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__text {
+		margin-bottom: 30px;
+	}
+	&__list {}
+	&__list-item {
+		list-style:	inside;
+		margin-bottom: 15px;
+		line-height: 20px;
+		&:last-child {
+			margin-bottom: 50px;
+		}
+	}
+}
+.list {
+	&__title {
+		font-family: 'Lato', sans-serif;
+		font-weight: 900;
+		display: inline-block;
+		margin: 50px 0 20px;
+	}
+}
 //***************************************
-//************ PORTFOLIO ****************
-
+//************* JOIN US *****************
+.join-us {
+	padding: 60px 0 80px;
+	&__row {}
+	&__title {}
+	&__text {
+		margin: 25px 0;
+	}
+	&__cta {}
+}
 //***************************************
 //************** TEAM *******************
 

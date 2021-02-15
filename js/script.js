@@ -16,7 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelector('.header__menu_hidden').classList.toggle('active');
 		document.querySelector('.header__menu').classList.toggle('active');
 		document.querySelector('.top-bar').classList.toggle('hidden');
-		document.querySelector('body').classList.toggle('lock');
+		document.querySelector('body').classList.toggle('lock')
     }
 });
+//========================================================================================
+//================================= SCROLL HEADER ========================================
+// document.addEventListener("DOMContentLoaded", function () {
+// 	document.querySelector('.header').scrollTop = function (event) {
+// 		document.querySelector('.header').classList.toggle('fixed')
+// 	};
+// )};
 //========================================================================================

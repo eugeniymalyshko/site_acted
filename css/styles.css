@@ -411,6 +411,7 @@ template {
 
 /****************** MAIN *******************/
 body {
+  background: url("../images/bg.png");
   font-family: "Poppins", sans-serif;
 }
 body.lock {
@@ -545,7 +546,7 @@ body.lock {
 }
 
 .facts {
-  background-color: #f6f6f6;
+  background: url("../images/bg.png");
   padding: 60px 0 45px;
 }
 @media (min-width: 320px) and (max-width: 991px) {

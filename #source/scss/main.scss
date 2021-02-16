@@ -4,6 +4,8 @@ html {
 
 }
 body {
+	background: url("../images/bg.png");
+
 	font-family: 'Poppins', sans-serif;
 	&.lock {
 		overflow: hidden;
@@ -116,7 +118,8 @@ body {
 //***************************************
 //************** FACTS ******************
 .facts {
-	background-color: #f6f6f6;
+	background: url("../images/bg.png");
+	//background-color: #f6f6f6;
 	padding: 60px 0 45px;
 	@media (min-width: 320px) and (max-width: 991px) {
 		padding-top: 20px;
@@ -268,6 +271,7 @@ body {
 //***************************************
 //********* DOMESTIC-VIOLENCE ***********
 .domestic-violence {
+
 	padding: 60px 0 45px;
 	@media (min-width: 320px) and 	(max-width: 991px) {
 		padding: 20px 0;

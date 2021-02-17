@@ -4,19 +4,35 @@ html {
 
 }
 body {
-	background: url("../images/bg.png");
-
 	font-family: 'Poppins', sans-serif;
 	&.lock {
 		overflow: hidden;
 	}
+
 }
 .container {@include min-max(320px, 1170px, 15px);}
 //************** WRAPPER ****************
-.wrapper {@include flexbox(); flex-direction: column; min-height: 100%; overflow: hidden;}
+.wrapper {
+	@include flexbox();
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+	background: url("../images/bg.png");
+	@media (max-width: 991px) {
+		background: $white;
+	}
+}
 //***************************************
 .content {
 	flex: 1 1 auto;
+}
+.background {
+	background-color: $white;
+	padding: 50px;
+	@media (max-width: 991px){
+		padding: 0;
+		background: transparent;
+	}
 }
 .uppercase {text-transform: uppercase;}
 .ibg {
@@ -31,13 +47,13 @@ body {
 	font-size: px-to-rem(24px);
 	font-weight: 600;
 	margin-bottom: 20px;
-	@media (min-width: 320px) and (max-width: 480px) {
+	@media (max-width: 480px) {
 		margin: 20px 0 10px;
+		padding: 15px;
 	}
 }
 .text {
-	font-size: px-to-rem(19px);
-	line-height: 40px;
+	line-height: px-to-rem(35px);
 }
 .video {
 	width: 100%;
@@ -118,11 +134,10 @@ body {
 //***************************************
 //************** FACTS ******************
 .facts {
-	background: url("../images/bg.png");
-	//background-color: #f6f6f6;
-	padding: 60px 0 45px;
-	@media (min-width: 320px) and (max-width: 991px) {
-		padding-top: 20px;
+	padding: 60px 0 30px;
+	margin-bottom: 30px;
+	@media (max-width: 767px) {
+		padding: 0;
 	}
 	&__row {
 		@include flexbox;
@@ -176,7 +191,6 @@ body {
 		@media (min-width: 320px) and (max-width: 991px) {
 			margin: 15px auto 15px ;
 		}
-
 	}
 	&__recent-donors {
 		@media (min-width: 768px) and (max-width: 991px) {
@@ -190,7 +204,6 @@ body {
 			display: none;
 		}
 	}
-
 }
 .recent-donors {
 	&__title {
@@ -205,7 +218,7 @@ body {
 		padding: 40px 15px 50px;
 		@include box-shadow;
 		background-color: $white;
-		@media (min-width: 320px) {
+		@media (max-width: 480px) {
 			padding: 20px 5px 30px;
 		}
 	}
@@ -220,115 +233,134 @@ body {
 }
 .donor {
 	&__icon {
-		width: px-to-rem(50px);
-		height: px-to-rem(50px);
-		border-radius: 50%;
-		background-color: $donate;
+		& img {
+			max-width: 100%;
+		}
 		margin-right: 12px;
-		@include box-shadow;
-		@media (min-width: 320px) {
-			width: px-to-rem(25px);
-			height: px-to-rem(25px);
+		margin-left: 10px;
+		@media (max-width: 480px) {
+			max-width: px-to-rem(30px);
+			margin-left: 5px;
+		}
+		@media (max-width: 767px) {
+			max-width: px-to-rem(35px);
 			margin-left: 5px;
 		}
 	}
 	&__name {
 		font-size: 18px;
-		@media (min-width: 320px) {
+		@media (max-width: 480px) {
 			font-size: 16px;
-
 		}
-
 	}
 	&__date {
 		display: block;
 		color: #B8B5B5;
 		font-size: 14px;
 		margin-top: px-to-rem(2px);
-		@media (min-width: 320px) {
+		@media (max-width: 480px) {
 			margin-top: px-to-rem(6px);
-
 		}
 	}
 	&__sum {
 		padding: 8.5px 31.5px;
 		color: $white;
 		font-weight: 600;
-		margin-left: 180px;
+		margin-left: auto;
+		margin-right: 5px;
 		border-radius: 50px;
 		background-color: $donate;
 		@include box-shadow;
-		@media (min-width: 320px) {
-			padding: 5px 15px;
+		@media (max-width: 480px) {
+			padding: 6px 15px;
 			font-size: 14px;
-			margin-left: auto;
-			margin-right: 5px;
-
+		}
+		@media (min-width: 481px) and (max-width: 991px) {
+			padding: 8px 18px;
 		}
 	}
 }
-
 //***************************************
 //********* DOMESTIC-VIOLENCE ***********
 .domestic-violence {
-
-	padding: 60px 0 45px;
-	@media (min-width: 320px) and 	(max-width: 991px) {
-		padding: 20px 0;
+	padding: 60px 0 30px;
+	margin-bottom: 30px;
+	@media (max-width: 991px) {
+		background: #f0f0f0;
+		padding: 10px 10px 60px 0;
 	}
-
 	&__row {}
 	&__title {
 		text-align: right;
 		margin-bottom: 40px;
-		@media (min-width: 320px) and (max-width: 991px) {
+		@media (max-width: 991px) {
 			text-align: center;
+			margin: 20px 0;
 		}
 	}
 }
-.video {
-	z-index: 30;
-}
-
+.video {}
 //***************************************
 //********** OUR-INITIATIVE *************
 .our-initiative {
-	background-color: #f6f6f6;
-	padding: 60px 0 80px;
-
+	padding: 60px 0 30px;
+	margin-bottom: 30px;
+	@media (max-width: 767px) {
+		padding: 0  0 30px;
+	}
 	&__row {}
 	&__title {
 		margin-bottom: 40px;
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+		}
 	}
 	&__text {
+		line-height: 30px;
 		margin-bottom: 30px;
 	}
 	&__list {}
 	&__list-item {
+		font-style: italic;
 		list-style:	inside;
 		margin-bottom: 15px;
-		line-height: 20px;
+		line-height: 30px;
 		&:last-child {
 			margin-bottom: 50px;
+			@media (max-width: 991px) {
+				margin-bottom: 25px;
+			}
 		}
 	}
 }
 .list {
 	&__title {
 		font-family: 'Lato', sans-serif;
+		font-size: 18px;
 		font-weight: 900;
 		display: inline-block;
 		margin: 50px 0 20px;
+		@media (min-width: 320px) {
+			margin: 12px 0 10px;
+		}
 	}
 }
 //***************************************
 //************* JOIN US *****************
 .join-us {
 	padding: 60px 0 80px;
+	@media (max-width: 991px) {
+		background: #f0f0f0;
+		padding: 10px 10px 60px 10px;
+	}
 	&__row {}
-	&__title {}
+	&__title {
+	}
 	&__text {
-		margin: 25px 0;
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			margin-bottom: 15px;
+		}
 	}
 	&__cta {}
 }
